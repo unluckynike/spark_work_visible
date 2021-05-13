@@ -22,7 +22,8 @@ public class SaleRateController {
     private SaleRateService saleRateService;
 
     @RequestMapping(value = "/sale",method = RequestMethod.GET)
-    public void find(){
+    public String find(){
         saleRateService.find();
+        return "system/welcome";
     }
 }
